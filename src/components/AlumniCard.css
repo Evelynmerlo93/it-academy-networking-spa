@@ -1,0 +1,79 @@
+.alumni-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: var(--shadow);
+}
+
+.alumni-card-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.alumni-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.alumni-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.alumni-name {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+}
+
+.alumni-role {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text);
+}
+
+.alumni-location {
+  font-size: 0.75rem;
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+.btn-alumni {
+  width: 100%;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-connect {
+  background: var(--gradient-primary);
+  color: #ffffff;
+}
+
+.btn-message {
+  background-color: var(--color-code-bg);
+  color: var(--color-text-heading);
+  border: 1px solid var(--color-border);
+}
+
+.btn-alumni:focus-visible {
+  outline: 3px solid var(--color-primary-end);
+  outline-offset: 2px;
+}
+
+.btn-alumni:hover {
+  opacity: 0.85;
+}

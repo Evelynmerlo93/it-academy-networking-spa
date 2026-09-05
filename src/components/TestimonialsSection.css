@@ -1,0 +1,102 @@
+.testimonials-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.testimonials-grid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-card {
+  display: none;
+  text-align: left;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.testimonial-card.is-active {
+  display: block;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-text-heading);
+}
+
+.stars {
+  color: var(--color-primary-end);
+  font-size: 0.9rem;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.testimonials-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.control-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-primary-end);
+  background: transparent;
+  color: var(--color-primary-end);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.control-btn:hover {
+  background: var(--color-primary-bg, rgba(223, 0, 127, 0.1));
+}
+
+.control-btn:focus-visible {
+  outline: 3px solid var(--color-primary-end);
+  outline-offset: 2px;
+}
+
+/* Breakpoint 1: Tablet - mostrar totes en grid, ocultem els controls */
+@media (min-width: 768px) {
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    display: block;
+  }
+
+}

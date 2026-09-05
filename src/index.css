@@ -1,0 +1,92 @@
+:root {
+  /* Colors de marca (Figma: text_color_gradient) */
+  --color-primary-start: #873aaa;
+  --color-primary-end: #df007f;
+  --gradient-primary: linear-gradient(135deg, var(--color-primary-start), var(--color-primary-end));
+
+  --color-text: #6b6375;
+  --color-text-heading: #08060d;
+  --color-bg: #ffffff;
+  --color-border: #e5e4e7;
+  --color-code-bg: #f4f3ec;
+
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font: 16px/145% var(--font-body);
+  letter-spacing: 0.18px;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+main {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  color: var(--color-text-heading);
+}
+
+h1 {
+  font-size: 2.25rem;
+  letter-spacing: -1px;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.25rem;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 135%;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--color-text-heading);
+  background: var(--color-code-bg);
+  display: inline-flex;
+}
+
+/* Breakpoint 1: Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Breakpoint 2: Desktop */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+    margin: 32px 0;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}

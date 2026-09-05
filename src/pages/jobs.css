@@ -1,0 +1,70 @@
+.jobs-page {
+  padding: 24px 20px 48px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.jobs-page h1 {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+}
+
+.jobs-subtitle {
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.jobs-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.jobs-filters input,
+.jobs-filters select {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.jobs-filters input:focus-visible,
+.jobs-filters select:focus-visible {
+  outline: 3px solid var(--color-primary-end);
+  outline-offset: 2px;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.no-results {
+  text-align: center;
+  color: var(--color-text);
+  padding: 24px 0;
+}
+
+/* Breakpoint 1: Tablet */
+@media (min-width: 768px) {
+  .jobs-filters {
+    flex-direction: row;
+  }
+
+  .jobs-filters input {
+    flex: 1;
+  }
+
+  .jobs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint 2: Desktop */
+@media (min-width: 1024px) {
+  .jobs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

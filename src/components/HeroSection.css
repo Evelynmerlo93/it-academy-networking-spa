@@ -1,0 +1,84 @@
+.hero {
+  text-align: center;
+  padding: var(--spacing-md, 20px);
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  font-size: 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.hero-buttons button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#join-btn {
+  border: none;
+  background: var(--gradient-primary);
+  color: #ffffff;
+}
+
+.btn-outline-hero {
+  background: transparent;
+  border: 1.5px solid var(--color-primary-end);
+  color: var(--color-primary-end);
+}
+
+.hero-buttons button:hover {
+  opacity: 0.85;
+}
+
+.hero-buttons button:focus-visible {
+  outline: 3px solid var(--color-primary-end);
+  outline-offset: 2px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+/* Breakpoint 1: Tablet */
+@media (min-width: 768px) {
+  .hero {
+    padding: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Breakpoint 2: Desktop */
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero img {
+    width: 80%;
+  }
+}

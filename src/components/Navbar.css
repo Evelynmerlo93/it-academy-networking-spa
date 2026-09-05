@@ -1,0 +1,102 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: #ffffff;
+}
+
+/* Enlace del logo y alineación del icono con el h1 */
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.navbar-logo img,
+.logo-icon {
+  display: block;
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Estilo para el h1 sin márgenes para que no rompa la barra */
+.logo-text {
+  margin: 0;
+  font-size: 1.28rem;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: -0.00em;
+}
+
+/* En móvil ocultamos los links de texto, dejamos solo logo + acciones */
+.navbar-links {
+  display: none;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  padding-bottom: 4px;
+}
+
+/* Subrayado rosa activo estilo Figma */
+.navbar-links a.active {
+  color: var(--color-primary-end);
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-primary-end);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  border: 1.5px solid var(--color-primary-end);
+  color: var(--color-primary-end);
+  background: transparent;
+}
+
+.btn-gradient {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border: none;
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary-end);
+  outline-offset: 2px;
+}
+
+/* Breakpoint 1: Tablet - mostramos los links */
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Breakpoint 2: Desktop */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 16px 48px;
+  }
+}

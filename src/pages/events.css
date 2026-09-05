@@ -1,0 +1,55 @@
+.events-page {
+  padding: 24px 20px 48px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.events-page h1 {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+}
+
+.events-subtitle {
+  color: var(--color-text);
+  margin-bottom: 24px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.event-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.event-title {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  color: var(--color-text-heading);
+}
+
+.event-meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+/* Breakpoint 1: Tablet */
+@media (min-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Breakpoint 2: Desktop */
+@media (min-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

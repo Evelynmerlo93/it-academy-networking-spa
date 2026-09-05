@@ -1,0 +1,166 @@
+.footer {
+  --footer-bg: #1a1d24;
+  --footer-bg-elevated: #252830;
+  --footer-border: #363a45;
+  --footer-border-soft: #2e323d;
+  --footer-text-muted: #9ca3af;
+  --footer-nav-link: #d1d5db;
+
+  background-color: var(--footer-bg);
+  color: #ffffff;
+  padding: 32px 20px 16px 20px;
+  font-family: var(--font-body);
+}
+
+/* Formulari */
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.footer-form label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--footer-bg-elevated);
+  border: 1px solid var(--footer-border);
+  border-radius: 20px;
+  padding: 6px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.input-group input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 8px 12px;
+}
+
+.input-group button {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.input-group input:focus-visible,
+.input-group button:focus-visible {
+  outline: 3px solid var(--color-primary-end);
+  outline-offset: 2px;
+}
+
+/* Navegacio central */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-nav .logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-nav .logo span {
+  color: var(--color-primary-end);
+}
+
+.footer-nav a {
+  color: var(--footer-nav-link);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer-nav a:focus-visible,
+.footer-nav .logo:focus-visible {
+  outline: 2px solid var(--color-primary-end);
+  outline-offset: 3px;
+}
+
+.footer hr {
+  border: none;
+  border-top: 1px solid var(--footer-border-soft);
+  margin: 20px 0;
+}
+
+/* Seccio inferior */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.75rem;
+  color: var(--footer-text-muted);
+  text-align: center;
+}
+
+.footer-bottom select {
+  background-color: var(--footer-bg-elevated);
+  color: #ffffff;
+  border: 1px solid var(--footer-border);
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.footer-bottom select:focus-visible {
+  outline: 3px solid var(--color-primary-end);
+  outline-offset: 2px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+}
+
+.social-links a {
+  color: var(--footer-nav-link);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--color-primary-end);
+  outline-offset: 3px;
+}
+
+/* Breakpoint 1: Tablet */
+@media (min-width: 768px) {
+  .footer {
+    padding: 40px 60px 20px 60px;
+  }
+
+  .input-group {
+    flex-direction: row;
+    padding: 4px 6px 4px 16px;
+  }
+
+  .footer-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
