@@ -3,8 +3,9 @@ import { createNavbar } from "../components/Navbar";
 import { createFooter } from "../components/Footer";
 import { createJobCard } from "../components/JobCard";
 import { jobs } from "../data/jobs";
-import { filterJobs } from "../utilities/filterJobs";
 
+
+// creo la funcion para poder completar mis etiquetas vacias 
 export function renderJobsPage() {
   const header = document.querySelector("header");
   header.appendChild(createNavbar());
@@ -41,7 +42,7 @@ export function renderJobsPage() {
   `;
 
   const footer = document.querySelector("footer");
-  footer.appendChild(createFooter());
+  footer.appendChild(createFooter()); //mete este elemento dentro de este otro elemento
 
   setupFilters();
 }
@@ -57,10 +58,19 @@ function setupFilters() {
   populateSelect(locationFilter, getUniqueLocations(jobs));
 
   function applyFilters() {
-    const filtered = filterJobs(jobs, {
-      query: searchInput.value,
-      stack: stackFilter.value,
-      location: locationFilter.value,
+    const query = searchInput.value.trim().toLowerCase();
+    const stack = stackFilter.value;
+    const location = locationFilter.value;
+
+    const filtered = jobs.filter((job) => {
+      const matchesQuery =
+        job.title.toLowerCase().includes(query) ||
+        job.company.toLowerCase().includes(query);
+
+      const matchesStack = stack === "" || job.stack.includes(stack);
+      const matchesLocation = location === "" || job.location === location;
+
+      return matchesQuery && matchesStack && matchesLocation;
     });
 
     renderList(filtered);

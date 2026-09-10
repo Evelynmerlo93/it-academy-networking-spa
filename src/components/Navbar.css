@@ -1,65 +1,51 @@
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 20px;
-  border-bottom: 1px solid var(--color-border);
+  padding: 0.75rem 1.25rem; 
+  border-bottom: 0.0625rem solid var(--color-border);
   background-color: #ffffff;
+    margin-bottom: 2rem;
 }
 
-/* Enlace del logo y alineación del icono con el h1 */
 .navbar-logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   text-decoration: none;
 }
 
 .navbar-logo img,
 .logo-icon {
   display: block;
-  height: 28px;
+  height: 1.75rem;
   width: auto;
   object-fit: contain;
 }
 
-/* Estilo para el h1 sin márgenes para que no rompa la barra */
 .logo-text {
   margin: 0;
   font-size: 1.28rem;
   font-weight: 400;
   color: #000000;
-  letter-spacing: -0.00em;
 }
 
-/* En móvil ocultamos los links de texto, dejamos solo logo + acciones */
+/* En movil ocultamos el meni */
 .navbar-links {
   display: none;
-}
-
-.navbar-links a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: 0.95rem;
-  padding-bottom: 4px;
-}
-
-/* Subrayado rosa activo estilo Figma */
-.navbar-links a.active {
-  color: var(--color-primary-end);
-  font-weight: 600;
-  border-bottom: 2px solid var(--color-primary-end);
 }
 
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
+  display: none;
 }
 
 .btn {
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.63rem;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
@@ -67,36 +53,86 @@
 }
 
 .btn-outline {
-  border: 1.5px solid var(--color-primary-end);
+  border: 0.09375rem solid var(--color-primary-end);
   color: var(--color-primary-end);
   background: transparent;
+  font-size: 0.90rem;
 }
 
 .btn-gradient {
   background: var(--gradient-primary);
   color: #ffffff;
   border: none;
+  font-size: 0.90rem;
 }
 
-.btn:focus-visible {
-  outline: 3px solid var(--color-primary-end);
-  outline-offset: 2px;
+.navbar-user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-/* Breakpoint 1: Tablet - mostramos los links */
-@media (min-width: 768px) {
+.icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.user-avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+
+
+/* --- Bp : TABLERO / PANTALLAS MEDIANAS (768px) --- */
+@media (min-width: 48rem) { /* 768px / 16 = 48rem */
   .navbar-links {
     display: flex;
-    gap: 24px;
+    gap: 1.25rem; /* 20px */
     list-style: none;
     margin: 0;
     padding: 0;
   }
-}
 
-/* Breakpoint 2: Desktop */
-@media (min-width: 1024px) {
-  .navbar {
-    padding: 16px 48px;
+  .navbar-links a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 0.9rem;
+  }
+
+  .navbar-links a.active {
+    color: var(--color-primary-end);
+    font-weight: 600;
+    border-bottom: 0.125rem solid var(--color-primary-end);
   }
 }
+
+
+/* --- Bp DESKTOPS(1024px) --- */
+@media (min-width: 64rem) { /* 1024px / 16 = 64rem */
+  .navbar {
+    padding: 1rem 3rem; /* 16px 48px */
+  }
+  .navbar-actions {
+    display: flex;
+    font-size: 0.90rem;
+  }
+
+  .navbar-links {
+    gap: 1.5rem; 
+
+  }
+  }
+
+  .navbar-links a {
+    font-size: 0.95rem;
+  }

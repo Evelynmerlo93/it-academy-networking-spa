@@ -11,7 +11,7 @@ export function createHeroSection() {
       <button id="join-btn">Uneix-te</button>
       <button id="learn-more-btn" class="btn-outline-hero">Mira que fem</button>
     </div>
-    <img src="/VIDEO.png" alt="Video reunio de grup" />
+    <img src="/VIDEO.png" alt="Video reunion de grup" />
   `;
 
   return section;

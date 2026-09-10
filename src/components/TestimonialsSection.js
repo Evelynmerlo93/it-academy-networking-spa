@@ -7,7 +7,7 @@ export function createTestimonialsSection() {
 
   section.innerHTML = `
     <h2 class="testimonials-title">
-      T'ensenyem el que opinen els nostres súper-usuaris!
+      "T'ensenyem el que opinen els nostres súper-usuaris!"
     </h2>
 
     <div class="testimonials-grid" id="testimonials-grid">

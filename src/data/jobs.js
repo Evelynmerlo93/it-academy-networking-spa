@@ -1,3 +1,10 @@
+import jobSoftware from "../assets/jobSoftware.png" 
+import jobProduct from "../assets/jobProduct.png"
+import jobData from "../assets/jobData.png"
+import jobUx from "../assets/jobUx.png"
+import jobMarketing from "../assets/jobMarketing.png"
+import jobHr from "../assets/jobHr.png"
+
 // applyType solo puede ser "direct" o "external"
 // Cada oferta tiene: id, title, company, location, contractType, stack (array), postedAgo, image, applyType, applyUrl (opcional)
 
@@ -10,7 +17,7 @@ export const jobs = [
     contractType: "Temps complet",
     stack: ["JavaScript", "React"],
     postedAgo: "fa 2 dies",
-    image: "https://via.placeholder.com/300x180",
+    image: jobSoftware,
     applyType: "direct",
   },
   {
@@ -21,7 +28,7 @@ export const jobs = [
     contractType: "Temps complet",
     stack: ["Agile", "Scrum"],
     postedAgo: "fa 1 setmana",
-    image: "https://via.placeholder.com/300x180",
+    image: jobProduct,
     applyType: "external",
     applyUrl: "https://example.com/oferta-product-manager",
   },
@@ -33,7 +40,7 @@ export const jobs = [
     contractType: "Mitja jornada",
     stack: ["SQL", "Python"],
     postedAgo: "fa 3 dies",
-    image: "https://via.placeholder.com/300x180",
+    image: jobData,
     applyType: "direct",
   },
   {
@@ -44,7 +51,7 @@ export const jobs = [
     contractType: "Temps complet",
     stack: ["Figma", "UX Research"],
     postedAgo: "fa 5 dies",
-    image: "https://via.placeholder.com/300x180",
+    image: jobUx,
     applyType: "external",
     applyUrl: "https://example.com/oferta-ux-designer",
   },
@@ -56,7 +63,7 @@ export const jobs = [
     contractType: "Temps complet",
     stack: ["SEO", "Content"],
     postedAgo: "fa 1 dia",
-    image: "https://via.placeholder.com/300x180",
+    image: jobMarketing,
     applyType: "direct",
   },
   {
@@ -67,7 +74,7 @@ export const jobs = [
     contractType: "Temps complet",
     stack: ["Recruiting"],
     postedAgo: "fa 4 dies",
-    image: "https://via.placeholder.com/300x180",
+    image: jobHr,
     applyType: "direct",
   },
-];
+];   

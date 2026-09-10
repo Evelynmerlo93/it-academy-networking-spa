@@ -1,31 +1,61 @@
-.hero {
-  text-align: center;
-  padding: var(--spacing-md, 20px);
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.hero h1 {
-  font-size: 1.75rem;
-  margin-bottom: 12px;
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-height: 80vh;
+
+}
+
+/* Oculto en móvil lo que no está en el prototipo de Figma */
+.hero h1,
+.btn-outline-hero,
+.hero img {
+  display: none;
+}
+
+/* Logo insertado arriba del párrafo en móvil */
+.hero p::before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 60px;
+  margin: 0 auto 2rem auto;
+  background-image: url('../assets/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .hero p {
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-  font-size: 1rem;
+  margin: 0 auto 2rem auto;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
 }
 
 .hero-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
+  gap: 0.625rem;
+  width: 100%;
+  max-width: 20rem;
+  margin-bottom: 3rem;
 }
 
 .hero-buttons button {
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   font-weight: bold;
-  cursor: pointer;
 }
 
 #join-btn {
@@ -45,40 +75,46 @@
 }
 
 .hero-buttons button:focus-visible {
-  outline: 3px solid var(--color-primary-end);
-  outline-offset: 2px;
+  outline: 0.1875rem solid var(--color-primary-end);
+  outline-offset: 0.125rem;
 }
 
-.hero img {
-  width: 100%;
-  max-width: 900px;
-  border-radius: 12px;
-  margin-top: 20px;
-}
 
-/* Breakpoint 1: Tablet */
-@media (min-width: 768px) {
+/* --- DESKTOP (PANTALLAS GRANDES) --- */
+@media (min-width: 64rem) {
   .hero {
-    padding: 40px;
+    padding: 2rem 8.25rem;
+  }
+
+  /* Desactivo el logo del párrafo para que no aparezca en PC */
+  .hero p::before {
+    display: none;
+  
+  }
+
+  /* Vuelvo a mostrar el h1, la imagen y el botón secundario */
+  .hero h1,
+  .btn-outline-hero,
+  .hero img {
+    display: block;
   }
 
   .hero h1 {
-    font-size: 2.25rem;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
   }
 
   .hero-buttons {
     flex-direction: row;
     justify-content: center;
   }
-}
-
-/* Breakpoint 2: Desktop */
-@media (min-width: 1024px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
 
   .hero img {
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    margin-top: 2rem;
   }
 }

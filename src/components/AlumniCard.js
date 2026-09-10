@@ -43,7 +43,7 @@ export function createAlumniCard(alumni) { // creo funcion recibiendo una variab
   // 4. Conectamos el evento del botón
   setupConnectButton(article, alumni);
 
-  // 5. Entregamos la tarjeta terminada
+  //  Entrego la tarjeta terminada
   return article;
 }
 

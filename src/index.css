@@ -1,5 +1,5 @@
 :root {
-  /* Colors de marca (Figma: text_color_gradient) */
+
   --color-primary-start: #873aaa;
   --color-primary-end: #df007f;
   --gradient-primary: linear-gradient(135deg, var(--color-primary-start), var(--color-primary-end));
