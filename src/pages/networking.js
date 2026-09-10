@@ -9,9 +9,9 @@ export function renderNetworkingPage() {
   header.appendChild(createNavbar());
 
   const main = document.querySelector("main");
-  //agrupo elementos que van juntos en el html visualmente:
+
   main.innerHTML = `
-    <section class="networking-page"> //
+    <section class="networking-page"> 
     
       <div class="networking-search"> 
 

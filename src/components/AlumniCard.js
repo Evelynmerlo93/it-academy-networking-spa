@@ -3,13 +3,13 @@ import "./AlumniCard.css";
 export function createAlumniCard(alumni) { 
   const article = document.createElement("article");  
   article.className = "alumni-card"; 
-  article.dataset.id = String(alumni.id); // Guardo el ID del alumno dentro del propio elemento HTML
+  article.dataset.id = String(alumni.id);
 
   let roleText;
   if (alumni.company) { 
-    roleText = `${alumni.role} de ${alumni.company}`; // si la tiene mostrare sus dos infos
+    roleText = `${alumni.role} de ${alumni.company}`; 
   } else {
-    roleText = alumni.role; // y si no la tiene solo mostrare su role. 
+    roleText = alumni.role; 
   }
 
 //Texto y clase para el botón 
@@ -43,7 +43,7 @@ export function createAlumniCard(alumni) {
   //Conectamos el evento del boton
   setupConnectButton(article, alumni);
 
-  //Entrego la tarjeta terminada
+
   return article;
 }
 
