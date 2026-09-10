@@ -1,4 +1,3 @@
-
 .navbar {
   display: flex;
   align-items: center;
@@ -6,7 +5,8 @@
   padding: 0.75rem 1.25rem; 
   border-bottom: 0.0625rem solid var(--color-border);
   background-color: #ffffff;
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* Permite que los enlaces bajen de línea en móvil */
 }
 
 .navbar-logo {
@@ -31,16 +31,34 @@
   color: #000000;
 }
 
-/* En movil ocultamos el meni */
+/* En móvil los enlaces se muestran ordenados abajo para que sean accesibles */
 .navbar-links {
-  display: none;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.85rem;
+}
+
+.navbar-links a.active {
+  color: var(--color-primary-end);
+  font-weight: 600;
+  border-bottom: 0.125rem solid var(--color-primary-end);
 }
 
 .navbar-actions {
-  display: flex;
+  display: none; /* Oculto en movil */
   align-items: center;
   gap: 0.5rem;
-  display: none;
 }
 
 .btn {
@@ -93,35 +111,30 @@
 }
 
 
-/* --- Bp : TABLERO / PANTALLAS MEDIANAS (768px) --- */
-@media (min-width: 48rem) { /* 768px / 16 = 48rem */
+/* TABLET*/
+@media (min-width: 48rem) { 
+  .navbar {
+    flex-wrap: nowrap;
+  }
+
   .navbar-links {
-    display: flex;
-    gap: 1.25rem; /* 20px */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    width: auto;
+    margin-top: 0;
+    gap: 1.25rem; 
   }
 
   .navbar-links a {
-    text-decoration: none;
-    color: var(--color-text);
     font-size: 0.9rem;
-  }
-
-  .navbar-links a.active {
-    color: var(--color-primary-end);
-    font-weight: 600;
-    border-bottom: 0.125rem solid var(--color-primary-end);
   }
 }
 
 
-/* --- Bp DESKTOPS(1024px) --- */
-@media (min-width: 64rem) { /* 1024px / 16 = 64rem */
+/* DESKTOP(1024px en adelante)*/
+@media (min-width: 64rem) { 
   .navbar {
-    padding: 1rem 3rem; /* 16px 48px */
+    padding: 1rem 3rem; 
   }
+
   .navbar-actions {
     display: flex;
     font-size: 0.90rem;
@@ -129,10 +142,9 @@
 
   .navbar-links {
     gap: 1.5rem; 
-
-  }
   }
 
   .navbar-links a {
     font-size: 0.95rem;
   }
+}
