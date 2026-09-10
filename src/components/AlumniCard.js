@@ -1,3 +1,4 @@
+//xarxa
 import "./AlumniCard.css"; // traigo los estilos 
 
 export function createAlumniCard(alumni) { // creo funcion recibiendo una variable llamada alumni
