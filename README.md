@@ -12,6 +12,7 @@ El proyecto está organizado por responsabilidades en carpetas independientes:
 - **Archivos HTML**: Estructura limpia basada en Multi-Page Application (`index.html`, `jobs.html`, etc.).
   
 <img width="143" height="552" alt="image" src="https://github.com/user-attachments/assets/8841589f-d195-4abb-81f5-5b61360ccba3" />
+
 ## Tecnologías y Características
 - JavaScript modular.
 - Manipulación del DOM.
