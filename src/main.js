@@ -4,7 +4,7 @@ import { createHeroSection } from "./components/HeroSection";
 import { createBenefitsSection } from "./components/BenefitsSection";
 import { createTestimonialsSection } from "./components/TestimonialsSection";
 import { createFooter } from "./components/Footer";
-import { renderFormPage } from "./pages/form.js"; // formulario
+import { renderFormPage } from "./pages/form.js";
 
 const header = document.querySelector("header");
 header.appendChild(createNavbar());
@@ -18,10 +18,8 @@ const footer = document.querySelector("footer");
 footer.appendChild(createFooter());
 
 //Si hacen clic en Apuntat, reemplaza el contenido por el formulario:
-//click sobre 
-// la e guarda informacion sobre los clicks 
-document.addEventListener("click", (e) => { // elemento donde se hizo click , textcontent trim lee las letras que hay dentro de ese boton y quita espacios
+document.addEventListener("click", (e) => {
   if (e.target.textContent.trim() === "Apunta't") {
-    main.innerHTML = renderFormPage(); // entonces mostrare formulario, tomo el html y lo relleno con la info de form.js
+    main.innerHTML = renderFormPage();
   }
 });

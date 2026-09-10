@@ -49,9 +49,10 @@ function setupEventsSearch() {
   searchInput.addEventListener("input", () => {
     const query = searchInput.value.trim().toLowerCase();
 
-    const filtered = events.filter((item) =>
-      item.title.toLowerCase().includes(query) ||
-      item.location.toLowerCase().includes(query)
+    const filtered = events.filter(
+      (item) =>
+        item.title.toLowerCase().includes(query) ||
+        item.location.toLowerCase().includes(query),
     );
 
     renderList(filtered);

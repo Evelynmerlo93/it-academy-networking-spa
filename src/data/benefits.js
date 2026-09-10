@@ -2,8 +2,6 @@ import iconGrad from "../assets/icon-grad.svg";
 import iconChat from "../assets/icon-chat.svg";
 import iconNetwork from "../assets/icon-network.svg";
 
-// Cada beneficio tiene: id, icon, alt, text, btnClass
-// btnClass solo puede ser "btn-purple" o "btn-pink-light"
 
 export const benefits = [
   {

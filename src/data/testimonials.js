@@ -2,7 +2,6 @@ import avatarMikel from "../assets/avatarMikel.png";
 import avatarEmma from "../assets/avatarEmma.png";
 import avatarLaia from "../assets/avatarLaia.png";
 
-// Cada testimonio tiene: id, name, avatar, text
 
 export const testimonials = [
   {

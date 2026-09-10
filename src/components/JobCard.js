@@ -1,19 +1,19 @@
-import "./JobCard.css"; /// importo estilos
+import "./JobCard.css"; 
 
-//guardo lista de favoritos (para que no se pierda al refrescar la pantalla) , cuando utilice esta variable sera para guardar id 
-const FAVORITES_KEY = "xlumni-favorite-jobs";// cajita en memoria del navegador localstorage
+//guardo lista de favoritos 
+const FAVORITES_KEY = "xlumni-favorite-jobs";
 
-//FUNCION PRINCIPAL: creo la funcion con una casilla job vacia, cada vez que la llame alguien metera una oferta de trabajo completa dentro
+//FUNCION PRINCIPAL
 export function createJobCard(job) {
 const article = document.createElement("article"); // le pido al navegador que cree la etiq article nueva y vacia
   article.className = "job-card"; // clase css para estilos
   article.dataset.id = String(job.id); //Asignamos el ID al elemento HTML para que la tarjeta sepa qué oferta representa
 
-//  Comprobamos si esta oferta es favorita
+//Comprobamos si esta oferta es favorita
 const favoriteList = getFavorites();
 const isFavorite = favoriteList.includes(job.id); //Con .includes() comprobamos si el ID de esta oferta concreta está dentro de la lista de favoritas. Nos devolverá true (verdadero) o false (falso).
 
-  //  Defino el texto del botón según si es enlace externo o no
+  //Defino el texto del botón según si es enlace externo o no
   let applyLabel ;
   let applyUrl ;
   let targetAttribute ;
@@ -28,7 +28,7 @@ const isFavorite = favoriteList.includes(job.id); //Con .includes() comprobamos 
     targetAttribute = "";
   }
 
-  //Defino las clases y etiquetas de accesibilidad según si es favorita
+  //Defino las clases y etiquetas de accesibilidad
   let buttonClass = "favorite-btn";
   let ariaLabelText = "Afegir a preferides";
 
@@ -37,7 +37,7 @@ const isFavorite = favoriteList.includes(job.id); //Con .includes() comprobamos 
     ariaLabelText = "Treure de preferides";
   }
 
-  // Creo el HTML con variables sencillas
+
   article.innerHTML = `
     <div class="job-info">
       <h3 class="job-title">${job.title}</h3>
@@ -74,13 +74,13 @@ function setupFavoriteButton(article, jobId) {
   const button = article.querySelector(".favorite-btn");
 
   button.addEventListener("click", () => {
-    let favorites = getFavorites(); //busco en mi cajita si lo tengo guardado 
+    let favorites = getFavorites();  
  //pregunto si esta dentro de la libreta?
     if (favorites.includes(jobId)) {
-      // Si ya está en favoritos, lo quitamos de la lista con filter
+      //Si ya está en favoritos, lo quitamos de la lista con filter
       favorites = favorites.filter(id => id !== jobId);
     } else {
-      // Si no está, lo añadimos con push
+      //Si no está, lo añadimos con push
       favorites.push(jobId);
     }
 //actualiza memoria,
@@ -90,8 +90,8 @@ function setupFavoriteButton(article, jobId) {
 }
 //LEER LA MEMORIA DEL NAVEGADOR
 function getFavorites() {
-  const data = localStorage.getItem(FAVORITES_KEY); //veo la cajita 
-  return data ? JSON.parse(data) : []; // si la caja tiene datos JSON traduce y convierte para usar. si esta vacia devolvera una lista vacia
+  const data = localStorage.getItem(FAVORITES_KEY); 
+  return data ? JSON.parse(data) : [];
 }
 // GUARDAR EN LA MEMORIA DEL NAVEGADOR
 function saveFavorites(ids) { // Convertimos la lista en texto plano

@@ -13,7 +13,7 @@ export function createNavbar() {
   // Compruebo si estoy en la pagina de empleos
   const currentPage = document.body.dataset.page;
 
-  // Si estoy en jobs uso los iconos, si no los botones
+  // Si estoy en jobs uso los ICONOS, si no los BOTONES
   const actionsContent = currentPage === "jobs" 
     ? `
       <div class="navbar-user-menu">
@@ -57,7 +57,7 @@ export function createNavbar() {
 }
 
 function markActiveLink(nav) {
-  //Conseguimos el nombre de la pagina actual por ejemplo "jobs"
+
   const currentPage = document.body.dataset.page;
 
   //Buscamos TODOS los a dentro del navbar

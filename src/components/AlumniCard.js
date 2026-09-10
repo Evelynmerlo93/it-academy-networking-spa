@@ -1,19 +1,18 @@
-//xarxa
-import "./AlumniCard.css"; // traigo los estilos 
+import "./AlumniCard.css"; 
 
-export function createAlumniCard(alumni) { // creo funcion recibiendo una variable llamada alumni
-  const article = document.createElement("article");  // Creo una etiqueta HTML <article> vacía en la memoria del navegador
-  article.className = "alumni-card"; // para aplicar estilos
+export function createAlumniCard(alumni) { 
+  const article = document.createElement("article");  
+  article.className = "alumni-card"; 
   article.dataset.id = String(alumni.id); // Guardo el ID del alumno dentro del propio elemento HTML
 
   let roleText;
-  if (alumni.company) { // reviso si el alumno tiene company registrada 
+  if (alumni.company) { 
     roleText = `${alumni.role} de ${alumni.company}`; // si la tiene mostrare sus dos infos
   } else {
     roleText = alumni.role; // y si no la tiene solo mostrare su role. 
   }
 
-// 2. Texto y clase para el botón (según el estado inicial)
+//Texto y clase para el botón 
   let buttonText;
   let buttonClass;
 
@@ -25,7 +24,7 @@ export function createAlumniCard(alumni) { // creo funcion recibiendo una variab
     buttonClass = "btn-connect";
   }
 
-  // 3. Generamos el HTML usando las variables limpias
+  //Generamos el HTML usando las variables limpias
   article.innerHTML = `
     <div class="alumni-card-content">
       <img src="${alumni.avatar}" alt="${alumni.name}" class="alumni-avatar" />
@@ -41,25 +40,25 @@ export function createAlumniCard(alumni) { // creo funcion recibiendo una variab
     </button>
   `;
 
-  // 4. Conectamos el evento del botón
+  //Conectamos el evento del boton
   setupConnectButton(article, alumni);
 
-  //  Entrego la tarjeta terminada
+  //Entrego la tarjeta terminada
   return article;
 }
 
 function setupConnectButton(article, alumni) {
   const button = article.querySelector(".btn-alumni");
 
-  button.addEventListener("click", () => { // cuando haga click lo detectara con addEventListener
-    //ya dentro de ese evento hago las verificaciones y los invierto 
+  button.addEventListener("click", () => { 
+    
     if (alumni.isConnected === true) {
       alumni.isConnected = false;
     } else {
       alumni.isConnected = true;
     }
 
-    // Actualizamos la apariencia del botón según el nuevo estado
+    // Actualizamos la apariencia del botón segun el nuevo estado
     if (alumni.isConnected === true) {
       button.textContent = "Message";
       button.classList.remove("btn-connect");

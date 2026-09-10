@@ -1,4 +1,4 @@
-import './form.css';
+import "./form.css";
 
 export function renderFormPage() {
   return `
@@ -49,7 +49,7 @@ export function renderFormPage() {
           <span>O</span>
         </div>
 
-        <!-- Botones de redes sociales con íconos vectoriales -->
+        <!-- Botones de redes sociales -->
         <div class="social-buttons">
           <button type="button" class="btn-social btn-apple">
             <img src="https://img.icons8.com/ios-filled/50/000000/mac-os.png" alt="Apple" class="social-icon" />

@@ -5,8 +5,6 @@ import jobUx from "../assets/jobUx.png"
 import jobMarketing from "../assets/jobMarketing.png"
 import jobHr from "../assets/jobHr.png"
 
-// applyType solo puede ser "direct" o "external"
-// Cada oferta tiene: id, title, company, location, contractType, stack (array), postedAgo, image, applyType, applyUrl (opcional)
 
 export const jobs = [
   {

@@ -71,7 +71,7 @@
   font-size: 0.875rem;
 }
 
-/* Checkbox de terminos */
+/*Check terminos Y condiciones*/
 .checkbox-group {
   display: flex;
   align-items: center;
@@ -80,7 +80,7 @@
   font-size: 0.8rem;
 }
 
-/* BOTON DE REGISTRO */
+/*BOTON REGISTRO*/
 .btn-primary {
   width: 100%;
   background-color: var(--rosa-principal);
@@ -93,7 +93,7 @@
   cursor: pointer;
 }
 
-/* SEPARADOR O */
+/*SEPARADOR O*/
 .divider {
   margin: 1.25rem 0;
   border-bottom: 0.06rem solid #e5e7eb;
@@ -107,7 +107,7 @@
   font-size: 0.75rem;
 }
 
-/* BOTONES DE REDES SOCIALES */
+/* BOTONES REDES SOCIALES */
 .social-buttons {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,4 @@
-// Cada evento tiene: id, title, date, location
+
 
 export const events = [
   {

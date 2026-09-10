@@ -5,7 +5,7 @@ import { createJobCard } from "../components/JobCard";
 import { jobs } from "../data/jobs";
 
 
-// creo la funcion para poder completar mis etiquetas vacias 
+
 export function renderJobsPage() {
   const header = document.querySelector("header");
   header.appendChild(createNavbar());
@@ -42,11 +42,11 @@ export function renderJobsPage() {
   `;
 
   const footer = document.querySelector("footer");
-  footer.appendChild(createFooter()); //mete este elemento dentro de este otro elemento
+  footer.appendChild(createFooter()); 
 
   setupFilters();
 }
-
+//CORAZON DE LA BUSQUEDA JOB
 function setupFilters() {
   const grid = document.querySelector("#jobs-grid");
   const noResults = document.querySelector("#no-results");
@@ -61,11 +61,11 @@ function setupFilters() {
     const query = searchInput.value.trim().toLowerCase();
     const stack = stackFilter.value;
     const location = locationFilter.value;
-
+    
+//METODO FILTER 
     const filtered = jobs.filter((job) => {
       const matchesQuery =
-        job.title.toLowerCase().includes(query) ||
-        job.company.toLowerCase().includes(query);
+        job.title.toLowerCase().includes(query) || job.company.toLowerCase().includes(query);
 
       const matchesStack = stack === "" || job.stack.includes(stack);
       const matchesLocation = location === "" || job.location === location;

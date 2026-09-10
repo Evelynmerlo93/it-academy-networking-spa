@@ -1,9 +1,9 @@
-import "./BenefitsSection.css"; // cargo los estilos
-import { benefits } from "../data/benefits"; // traigo info de benefits
+import "./BenefitsSection.css"; 
+import { benefits } from "../data/benefits"; 
 
-export function createBenefitsSection() { // creo la funcion para poder utilizar
+export function createBenefitsSection() { 
 
-  const section = document.createElement("section"); //Creo la etiqueta HTML <section> en memoria y le asigna la clase "benefits-section".
+  const section = document.createElement("section"); 
   section.className = "benefits-section";
 
   section.innerHTML = `
@@ -15,12 +15,11 @@ export function createBenefitsSection() { // creo la funcion para poder utilizar
     </div>
   `;
 // map recorre la lista y crear las 4 tarjetas, unico texto con join
-// div creo contenedor para las tarjetas .
-  return section; // devuelve el elemento ya hecho con las tarjetas que hice
+
+  return section; 
 }
 
-function renderBenefitItem(item) { // plantilla de una sola tarjeta. Recibe una ventaja individual (item).
-//creo bloque con los datos contretos
+function renderBenefitItem(item) { 
 return `
     <article class="benefit-item">
       <img src="${item.icon}" alt="${item.alt}" class="benefit-icon-img" />
